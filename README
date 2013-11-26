@@ -1,0 +1,22 @@
+    bundle install
+    rspec spec/vcr_typhoeus_spec.rb
+    Run options: include {:focus=>true}
+
+    All examples were filtered out; ignoring {:focus=>true}
+    ....F
+
+    Failures:
+
+      1) Typhoeus (vcr hook) should allow hash as body
+         Failure/Error: Typhoeus::Request.post("http://blah.com", :body => { :text => 'text' } )
+         ArgumentError:
+           VCR::Request initialized with an invalid body: {:text=>"text"}.
+         # ./spec/vcr_typhoeus_spec.rb:24:in `block (3 levels) in <top (required)>'
+         # ./spec/vcr_typhoeus_spec.rb:23:in `block (2 levels) in <top (required)>'
+
+    Finished in 0.01269 seconds
+    5 examples, 1 failure
+
+    Failed examples:
+
+    rspec ./spec/vcr_typhoeus_spec.rb:22 # Typhoeus (vcr hook) should allow hash as body
